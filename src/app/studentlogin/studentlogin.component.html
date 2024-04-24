@@ -1,0 +1,58 @@
+<div class="whole">
+    <div class="card">
+        <div>
+            <h1>Student Login</h1>
+            <img src="../assets/Mahendra.png" alt="clg img" class="clg-logo">
+        </div>
+        
+        <form #ngForm class="ipbox row needs-validation d-flex flex-column justify-content-around align-items-center" novalidate>
+          <div class="col-md-10">
+            <label for="student_id" class="form-label">Student ID</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="student_id"><i class="material-symbols-outlined">badge</i></span>
+              <input type="text" [(ngModel)]="studentId" name="studentId" class="form-control" id="student_id" aria-describedby="inputGroupPrepend"
+                     required 
+                     pattern="[0-9]+" title="Only numbers are allowed">
+              <div class="invalid-feedback">
+                Please enter a valid student ID (number).
+              </div>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <label for="username" class="form-label">Username</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="username"><i class="material-symbols-outlined">person</i></span>
+              <input type="text" [(ngModel)]="username" name="username" class="form-control" id="username" aria-describedby="inputGroupPrepend"
+                     required 
+                     pattern="[a-zA-Z\s]+" title="Only letters and spaces are allowed">
+              <div class="invalid-feedback">
+                Please enter a valid username.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <label for="password" class="form-label">Password</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="password"><i class="material-symbols-outlined">key</i></span>
+              <input type="password" [(ngModel)]="password" name="password" class="form-control" id="password" aria-describedby="inputGroupPrepend"
+                     required>
+              <div class="invalid-feedback">
+                Please enter a valid password.
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="col-12" style="text-align: center;">
+            <button class="btn btn-primary" type="submit" >Submit form</button>
+          </div>
+
+          
+        </form>
+        
+                  
+          
+    </div>
+    <div>
+
+    </div>
+</div>

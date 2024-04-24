@@ -1,0 +1,279 @@
+<div class="wholescreen">
+    
+    <div class="midd">
+        <div class="tag">
+            <h3 style="color: rgb(56, 57, 112);">Add Details</h3>
+        </div>
+        
+        <form #ngForm class="ipbox row  needs-validation" novalidate>
+            <div class="left ">
+                <h4 >Personal Details</h4>
+
+
+                
+                  <div class="col-md-10">
+                    <label for="fullname" class="form-label">Student name</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="fullname"><i class="material-symbols-outlined">person</i></span>
+                      <input type="text" class="form-control" id="fullname" aria-describedby="inputGroupPrepend"
+                             required [(ngModel)]="addStudentRequest.fullname" [ngModelOptions]="{standalone: true}"
+                             pattern="[a-zA-Z\s]+" title="Only letters and spaces are allowed">
+                      <div class="invalid-feedback">
+                        Please enter a valid name.
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                
+
+
+                  <div class="col-md-10 d-flex justify-content-between">
+                    <div class="col-md-5">
+                        <label for="age" class="form-label">Age</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="age"> <i class="material-symbols-outlined">event</i></span>
+                          <input type="number" class="form-control" id="age" aria-describedby="inputGroupPrepend"
+                                 required [(ngModel)]="addStudentRequest.age" [ngModelOptions]="{standalone: true}"
+                                 min="18" max="30">
+                          <div class="invalid-feedback">
+                            Please enter a valid age between 18 and 30.
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-5">
+                        <label for="gender" class="form-label">Gender</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="gender"><i class="material-symbols-outlined">
+                            wc
+                          </i></span>
+                          <select class="form-select" id="gender" required [(ngModel)]="addStudentRequest.gender" [ngModelOptions]="{standalone: true}">
+                            <option selected disabled value="">Choose</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                            
+                          </select>                          <div class="invalid-feedback">
+                            Please choose a gender.
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  
+
+                  <div class="col-md-10">
+                    <label for="phonenumber" class="form-label">Phone number</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="phonenumber"><i class="material-symbols-outlined">call</i></span>
+                      <input type="text" class="form-control" id="phonenumber" aria-describedby="inputGroupPrepend"
+                             required [(ngModel)]="addStudentRequest.phonenumber" [ngModelOptions]="{standalone: true}"
+                             pattern="[0-9]+" title="Only numbers are allowed">
+                      <div class="invalid-feedback">
+                        Please enter a valid phone number.
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="col-md-10">
+                    <label for="emailaddress" class="form-label">Email address</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="emailaddress"><i class="material-symbols-outlined">
+                        mail
+                      </i></span>
+                      <input type="email" class="form-control" id="emailaddress" aria-describedby="inputGroupPrepend" required [(ngModel)]="addStudentRequest.emailaddress"[ngModelOptions]="{standalone: true}">
+                      <div class="invalid-feedback">
+                        Please enter a emailaddress.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-10">
+                    <label for="parent_name" class="form-label">Parent name</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="parent_name"><i class="material-symbols-outlined">supervisor_account</i></span>
+                      <input type="text" class="form-control" id="parent_name" aria-describedby="inputGroupPrepend"
+                             required [(ngModel)]="addStudentRequest.parent_name" [ngModelOptions]="{standalone: true}"
+                             pattern="[a-zA-Z]+" title="Only letters are allowed">
+                      <div class="invalid-feedback">
+                        Please enter a valid parent name.
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+
+                  <div class="col-md-10">
+                    <label for="parent_contact" class="form-label">Parent contact</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="parent_contact"><i class="material-symbols-outlined">contacts</i></span>
+                      <input type="text" class="form-control" id="parent_contact" aria-describedby="inputGroupPrepend"
+                             required [(ngModel)]="addStudentRequest.parent_contact" [ngModelOptions]="{standalone: true}"
+                             pattern="[0-9]+" title="Only numbers are allowed">
+                      <div class="invalid-feedback">
+                        Please enter a valid parent contact.
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+                 
+                    
+                  
+
+
+            </div>
+            <div class="left">
+                <h4>Academic Details</h4>
+
+
+               
+
+                  <div class="st">
+                    <label style="margin-bottom: 10px;" for="tuitionfee">Fees:</label>
+                    <div class="Status">
+                      <div class="stdiv">
+                        <input class="radio" type="radio" id="tuitionfee" name="fav_language" value="Paid" [(ngModel)]="addStudentRequest.tuitionfee"> 
+                        <label style="margin-left: 10px;" class="badge bg-success" for="html">Paid</label><br>
+                      </div>
+                      
+                     
+                      <div class="stdiv">
+                        <input class=" radio" type="radio" id="tuitionfee" name="fav_language" value="Not Paid" [(ngModel)]="addStudentRequest.tuitionfee">
+                        <label style="margin-left: 10px;" class="badge bg-danger" for="css">Not Paid</label><br>
+                      </div>        
+                    </div>        
+                  </div>
+
+                  
+                
+
+
+                  <div class="col-md-10 d-flex justify-content-between">
+                    <div class="col-md-5">
+                        <label for="grade" class="form-label">Grade</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="grade"><i class="material-symbols-outlined">
+                            hotel_class
+                          </i></span>
+                          <select class="form-select" id="grade" required  [(ngModel)]="addStudentRequest.grade" [ngModelOptions]="{standalone: true}">
+                            <option selected disabled value="">Choose</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            
+                          </select>                          <div class="invalid-feedback">
+                            Please choose a grade.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="department" class="form-label">Department</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="department"><i class="material-symbols-outlined">
+                            auto_awesome_motion
+                          </i></span>
+                          <select class="form-select" id="department" required  [(ngModel)]="addStudentRequest.department" [ngModelOptions]="{standalone: true}">
+                            <option selected disabled value="">Choose</option>
+                            <option>CSE</option>
+                            <option>EEE</option>
+                            <option>IT</option>
+                            <option>ECE</option>
+                            <option>MECH</option>
+                            
+                          </select>                          <div class="invalid-feedback">
+                            Please choose a department.
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  
+
+                  <div class="col-md-10 d-flex justify-content-between">
+                    
+                    <div class="col-md-5">
+                        <label for="absence" class="form-label">Absence</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="absence"><i class="material-symbols-outlined">calendar_month</i></span>
+                          <input type="number" class="form-control" id="absence" aria-describedby="inputGroupPrepend"
+                                 required [(ngModel)]="addStudentRequest.absence" [ngModelOptions]="{standalone: true}"
+                                 min="0" max="235" pattern="[0-9]+" title="Please enter a number between 0 and 235">
+                          <div class="invalid-feedback">
+                            Please enter a valid number between 0 and 235.
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-6">
+                        <label for="semester" class="form-label">Semester</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="semester"><i class="material-symbols-outlined">
+                            school
+                          </i></span>
+                          <select class="form-select" id="semester" required [(ngModel)]="addStudentRequest.semester"[ngModelOptions]="{standalone: true}" >
+                            <option selected disabled value="">Choose</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            
+                            
+                          </select>                          <div class="invalid-feedback">
+                            Please choose a semester.
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col-md-10">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="username"><i class="material-symbols-outlined">verified_user</i></span>
+                      <input type="text" class="form-control" id="username" aria-describedby="inputGroupPrepend"
+                             required minlength="6" maxlength="10" [(ngModel)]="addStudentRequest.username" [ngModelOptions]="{standalone: true}">
+                      <div class="invalid-feedback">
+                        Please enter a valid username with 6 to 10 characters.
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="col-md-10">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="password"><i class="material-symbols-outlined">lock</i></span>
+                      <input type="password" class="form-control" id="password" aria-describedby="inputGroupPrepend"
+                             required minlength="6" [(ngModel)]="addStudentRequest.password" [ngModelOptions]="{standalone: true}">
+                      <div class="invalid-feedback">
+                        Please enter a valid password with 6 or more characters.
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                 
+
+                    
+                  
+
+
+            </div>
+
+            <div class="col-12" style="text-align: center;" >
+                <button class="btn btn-primary " type="submit">Submit form</button>
+              </div>
+        </form>
+        
+    </div>
+</div>

@@ -1,0 +1,141 @@
+.mdi{
+    width: 100%;
+    height: 95vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .heading{
+      // background-color: #2880d331;
+      border-radius: 20px;
+      height: 60vh;
+      width: 50%;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // padding-left: 30px;
+    h1{
+        // color: rgb(77, 77, 77);
+        font-size: 60px;
+        color: #1F569A;
+    }
+    
+    p{
+        width: 70%;
+        height: 100px;
+        
+    }
+    
+  
+
+/* CSS */
+.button-86 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+    
+    
+    }
+    .card{
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      img{
+        width: 400px;
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #f5faff;
+      }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    
+ .mdi{
+  .heading{
+    width: 100%;
+    padding: 0px 20px;
+    height: 60vh;
+    
+    p{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .card{
+    display: none;
+  }
+ }
+}
+
+
+
+
+
+
